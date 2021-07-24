@@ -3,9 +3,6 @@
 # 忽略.env
 .env
 
-# 忽略 db
-db/
-
 # 忽略 node_modules
 /node_modules
 
