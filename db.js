@@ -91,3 +91,63 @@ const pool = mysql.createPool({
 //     console.log(results.length);
 //   }
 // );
+
+// //check table exists
+// let tableName = "users";
+// let sqlStr = `SHOW TABLES LIKE '${tableName}'`;
+// pool.query(
+//   // "SHOW TABLES LIKE 'users'",
+//   sqlStr,
+//   function (err, results) {
+//     console.log(results);
+//     console.log(results.length);
+//   }
+// );
+
+////back up (check the table is exist or not)
+// // check the table exists or not
+// const tableName = "users";
+// let sqlStr = `SHOW TABLES LIKE '${tableName}'`;
+// let isTableExist = true;
+// connection.query(sqlStr, function (err, results) {
+//   isTableExist = results.length !== 0;
+//   console.log("======================= 0");
+//   console.log(isTableExist);
+//   if (err) {
+//     connection.release();
+//     return;
+//   }
+// });
+// connection.release();
+
+// //create table
+// if (!isTableExist) {
+//   console.log(sqlStr);
+//   sqlStr =
+//     "CREATE TABLE " +
+//     tableName +
+//     " (" +
+//     "userid INT AUTO_INCREMENT PRIMARY KEY NOT NULL, " +
+//     "name VARCHAR(255) NOT NULL, " +
+//     "email VARCHAR(255) NOT NULL, " +
+//     "password VARCHAR(255) NOT NULL " +
+//     ")";
+//   connection.query(sqlStr, function (err, result) {
+//     if (err) {
+//       connection.release();
+//       res.status(510).send({
+//         status: "error",
+//         data: {
+//           message:
+//             "POST ERROR: sql query failed, can't create table: " +
+//             tableName,
+//         },
+//       });
+//       // throw err;
+//       console.log(err);
+//       return;
+//     }
+//     connection.release();
+//     console.log("Create table success: " + tableName);
+//   });
+// }
