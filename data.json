@@ -83,43 +83,41 @@
       {
         "name": "name",
         "label": "姓名",
-        "value": ""
+        "value": "",
+        "type": "text",
+        "required": "required",
+        "placeholder": null,
+        "minLength": null,
+        "maxLength": null,
+        "size": null,
+        "pattern": null
       },
       {
         "name": "phone",
         "label": "手機",
-        "value": ""
+        "value": "",
+        "type": "tel",
+        "required": "required",
+        "placeholder": "09xxxxxxxx",
+        "minLength": 10,
+        "maxLength": 10,
+        "size": 10,
+        "pattern": "^[09]{2}[0-9]{8}$"
       },
       {
         "name": "email",
         "label": "E-mail",
-        "value": ""
+        "value": "",
+        "type": "email",
+        "required": "required",
+        "placeholder": "xxx@example.com",
+        "minLength": 4,
+        "maxLength": 100,
+        "size": 100,
+        "pattern": "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
       }
     ],
     "selectStep": {
-      "roomList": [
-        {
-          "id": "A",
-          "title": "A包廂",
-          "subtitle": "F1",
-          "machine": "((JOYSOUND))",
-          "value": 100
-        },
-        {
-          "id": "B",
-          "title": "B包廂",
-          "subtitle": "MAX GO",
-          "machine": "((DAM))",
-          "value": 200
-        },
-        {
-          "id": "C",
-          "title": "C包廂",
-          "subtitle": "XG7000",
-          "machine": "((JOYSOUND))",
-          "value": 300
-        }
-      ],
       "listItems": [
         {
           "name": "room",
@@ -197,6 +195,15 @@
       }
     }
   },
+  "thankyouPage": {
+    "title": "謝謝您的預約",
+    "yourOrderId": "您的訂單編號是",
+    "texts": [
+      "我們的工作人員將會於確認預約後以電子郵件回覆訊息給您。",
+      "還請您再稍加等待喔，謝謝您。"
+    ],
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png"
+  },
   "reservedData": [
     {
       "date": "2021-07-24",
@@ -253,6 +260,10 @@
       "label": "唱歌時數"
     },
     {
+      "key": "attendence",
+      "label": "唱歌人數"
+    },
+    {
       "key": "order_status",
       "label": "訂單狀態",
       "options": [
@@ -284,56 +295,141 @@
     }
   },
   "memberSystemPage": {
-    "welcome": "歡迎使用後台系統",
+    "welcome": "歡迎使用會員系統",
+    "loggedIn": "您已經登入",
     "card": {
       "action": [
         "login",
-        "register",
-        "logout"
+        "register"
       ],
       "instruction": {
         "login": "商家登入",
         "register": "商家註冊",
-        "logout": "登出"
+        "logout": "點我登出"
       },
       "hint": {
         "login": "還沒有帳號？點此註冊",
-        "register": "已經有帳號了？點此登入",
-        "logout": "登出"
+        "register": "已經有帳號了？點此登入"
       }
     },
     "ownerLoginForm": [
       {
         "name": "email",
         "label": "E-mail",
-        "value": ""
+        "value": "",
+        "type": "email",
+        "required": "required",
+        "placeholder": "xxx@example.com",
+        "minLength": 4,
+        "maxLength": 100,
+        "size": 100,
+        "pattern": "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
       },
       {
         "name": "password",
         "label": "密碼",
-        "value": ""
+        "value": "",
+        "type": "password",
+        "required": "required",
+        "placeholder": "請輸入8~15個英數字",
+        "minLength": 8,
+        "maxLength": 15,
+        "size": 15,
+        "pattern": "[0-9a-zA-Z]{8,15}"
       }
     ],
     "ownerRegisterForm": [
       {
         "name": "name",
         "label": "姓名",
-        "value": ""
+        "value": "",
+        "type": "text",
+        "required": "required",
+        "placeholder": null,
+        "minLength": null,
+        "maxLength": null,
+        "size": null,
+        "pattern": null
       },
       {
         "name": "email",
         "label": "E-mail",
-        "value": ""
+        "value": "",
+        "type": "email",
+        "required": "required",
+        "placeholder": "xxx@example.com",
+        "minLength": 4,
+        "maxLength": 100,
+        "size": 100,
+        "pattern": "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
       },
       {
         "name": "password",
         "label": "密碼",
-        "value": ""
+        "value": "",
+        "type": "password",
+        "required": "required",
+        "placeholder": "請輸入8~15個英數字",
+        "minLength": 8,
+        "maxLength": 15,
+        "size": 15,
+        "pattern": "[0-9a-zA-Z]{8,15}"
       }
     ],
     "errorMessage": {
       "emptyColumns": "請輸入",
       "comma": "、"
     }
+  },
+  "multiLanguages": [
+    "CHT",
+    "ENG"
+  ],
+  "features": {
+    "memberSystem": "會員系統",
+    "management": "前往後台",
+    "orderSearch": "訂單查詢",
+    "orderSearchTexts": {
+      "orderIdInput": "請輸入訂單編號",
+      "noResult": "查無訂單"
+    }
+  },
+  "roomInfo": {
+    "selectDefaultOption": {
+      "id": "",
+      "title": "所有包廂"
+    },
+    "roomList": [
+      {
+        "id": "A",
+        "title": "A包廂",
+        "subtitle": "F1",
+        "machine": "((JOYSOUND))",
+        "value": 100
+      },
+      {
+        "id": "B",
+        "title": "B包廂",
+        "subtitle": "MAX GO",
+        "machine": "((DAM))",
+        "value": 200
+      },
+      {
+        "id": "C",
+        "title": "C包廂",
+        "subtitle": "XG7000",
+        "machine": "((JOYSOUND))",
+        "value": 300
+      }
+    ]
+  },
+  "apiResponse": {
+    "reservationData": {
+      "patchSuccess": "更新成功",
+      "patchFailed": "更新失敗"
+    }
+  },
+  "messages": {
+    "invalid": "輸入格式有誤"
   }
 }

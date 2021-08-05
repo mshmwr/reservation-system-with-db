@@ -1,6 +1,22 @@
 {
-  "main.css": "static/css/main.1abbedd0.css",
-  "main.css.map": "static/css/main.1abbedd0.css.map",
-  "main.js": "static/js/main.8ad26359.js",
-  "main.js.map": "static/js/main.8ad26359.js.map"
+  "files": {
+    "main.css": "./static/css/main.a67bcc3c.chunk.css",
+    "main.js": "./static/js/main.6cc1f13d.chunk.js",
+    "main.js.map": "./static/js/main.6cc1f13d.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.3c6acf57.js",
+    "runtime-main.js.map": "./static/js/runtime-main.3c6acf57.js.map",
+    "static/js/2.d143ce8e.chunk.js": "./static/js/2.d143ce8e.chunk.js",
+    "static/js/2.d143ce8e.chunk.js.map": "./static/js/2.d143ce8e.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.a67bcc3c.chunk.css.map": "./static/css/main.a67bcc3c.chunk.css.map",
+    "static/js/2.d143ce8e.chunk.js.LICENSE.txt": "./static/js/2.d143ce8e.chunk.js.LICENSE.txt",
+    "static/media/Thankyou.css": "./static/media/home.06d645dc.png",
+    "static/media/Header.css": "./static/media/logo_120_120.15c37a84.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3c6acf57.js",
+    "static/js/2.d143ce8e.chunk.js",
+    "static/css/main.a67bcc3c.chunk.css",
+    "static/js/main.6cc1f13d.chunk.js"
+  ]
 }

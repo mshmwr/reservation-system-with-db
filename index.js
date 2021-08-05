@@ -350,7 +350,7 @@ app.get("/api/user", function (req, res) {
     if (req.session.email === undefined) {
       res.status(200).send({
         data: {
-          status: "ok",
+          status: "error",
           result: null,
           message: "Please login first.",
         },
@@ -396,66 +396,68 @@ app.post("/api/user", function (req, res) {
 
   async function insertData() {
     //insert data
-    let sql = "INSERT INTO users (name, email, password, islogin) VALUES ?";
-    let values = [[name, email, password, 0]];
+    let sql = "INSERT INTO users (name, email, password, websitename) VALUES ?";
+    let values = [[name, email, password, ""]];
     let dataList = await query(sql, [values]);
     return dataList;
   }
 
   async function postDataToDB() {
-    let isRegisterFailed = false;
-    let errorMsg = "";
-    //check the data exist
-    if (name === "" || email === "" || password === "") {
-      isRegisterFailed = true;
-      errorMsg += "Error! The column(s) is/are empty.";
-    }
-    //透過RE確認email地址合法性
-    else if (email.search(regexEmail) === -1) {
-      isRegisterFailed = true;
-      errorMsg += "Error! This email address is invalid.";
-      console.log("==============");
-      console.log(errorMsg);
-      return;
-    }
-    //防止資料輸入長度大於資料庫設定長度
-    else if (name.length > 255 || password.length > 255) {
-      isRegisterFailed = true;
-      errorMsg += "Error! This name or password is too long.";
-    }
+    try {
+      let isRegisterFailed = false;
+      let errorMsg = "";
+      //check the data exist
+      if (name === "" || email === "" || password === "") {
+        isRegisterFailed = true;
+        errorMsg += "Error! The column(s) is/are empty.";
+      }
+      //透過RE確認email地址合法性
+      else if (email.search(regexEmail) === -1) {
+        isRegisterFailed = true;
+        errorMsg += "Error! This email address is invalid.";
+        console.log("==============");
+        console.log(errorMsg);
+        return;
+      }
+      //防止資料輸入長度大於資料庫設定長度
+      else if (name.length > 255 || password.length > 255) {
+        isRegisterFailed = true;
+        errorMsg += "Error! This name or password is too long.";
+      }
 
-    let dataList = await selectDataFromEmail();
-    if (dataList.length > 0) {
-      errorMsg += "The email already exists.";
-      isRegisterFailed = true;
-    }
-    if (isRegisterFailed) {
-      res.status(400).send({
+      let dataList = await selectDataFromEmail();
+      if (dataList.length > 0) {
+        errorMsg += "The email already exists.";
+        isRegisterFailed = true;
+      }
+      if (isRegisterFailed) {
+        res.status(400).send({
+          data: {
+            status: "error",
+            message: errorMsg,
+          },
+        });
+        return;
+      }
+      dataList = await insertData();
+      if (dataList.affectedRows > 0) {
+        res.status(200).send({
+          data: {
+            status: "ok",
+            message: "Register success",
+          },
+        });
+        return;
+      }
+    } catch {
+      res.status(500).send({
         data: {
           status: "error",
-          message: errorMsg,
+          message: "POST ERROR: user (server/db error)",
         },
       });
       return;
     }
-    dataList = await insertData();
-    if (dataList.affectedRows > 0) {
-      res.status(200).send({
-        data: {
-          status: "ok",
-          message: "Register success",
-        },
-      });
-      return;
-    }
-
-    res.status(500).send({
-      data: {
-        status: "error",
-        message: "POST ERROR: user (server/db error)",
-      },
-    });
-    return;
   }
 
   postDataToDB();
