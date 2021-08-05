@@ -12,9 +12,6 @@ const DB_PASSWORD = process.env.DB_PASSWORD;
 const DB_DATABASE = process.env.DB_DATABASE;
 const SECRET_KEY = process.env.SECRET_KEY;
 
-app.use(cors());
-// app.use(express.static("public"));
-app.use(express.static(path.join(__dirname, "build")));
 app.use(
   session({
     secret: SECRET_KEY,
@@ -23,6 +20,11 @@ app.use(
     // cookie: { secure: true },
   })
 );
+
+// app.use(express.static("public"));
+app.use(cors());
+app.use(express.static(path.join(__dirname, "build")));
+
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing
 
@@ -39,6 +41,9 @@ const pool = mysql.createPool({
   connectionLimit: 10,
   queueLimit: 0,
 });
+
+//Regex
+const regexEmail = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
 
 let query = function (sql, values) {
   return new Promise((resolve, reject) => {
@@ -91,7 +96,7 @@ const postDataKeys = [
 //http://localhost:3100/reservation_data?data[date]=2021-07-24
 
 app.get("/reservation_data", function (req, res) {
-  //get user
+  //get user reservation data
   const reqData = req.query.data;
   let sqlStr = "";
   let values = [];
@@ -129,7 +134,6 @@ app.get("/reservation_data", function (req, res) {
     try {
       if (!(await getSqlStrAndValues())) {
         res.status(500).send({
-          status: "ERROR",
           data: {
             status: "error",
             message: "GET ERROR: the query is null.",
@@ -139,19 +143,21 @@ app.get("/reservation_data", function (req, res) {
       }
       let dataList = await selectDataFromSqlStr();
       res.status(200).send({
-        status: "ok",
         data: {
+          status: "ok",
           result: dataList,
           message: "get order success",
         },
       });
+      return;
     } catch {
       res.status(500).send({
-        status: "error",
         data: {
+          status: "error",
           message: "GET ERROR: reservation_data (server/db error)",
         },
       });
+      return;
     }
   }
 
@@ -159,6 +165,7 @@ app.get("/reservation_data", function (req, res) {
 });
 
 app.post("/reservation_data", function (req, res) {
+  //add new reserveation data
   const postData = req.body.data;
   const order_id =
     postData["room"] +
@@ -221,8 +228,8 @@ app.post("/reservation_data", function (req, res) {
     try {
       if (await checkHasSameData()) {
         res.status(400).send({
-          status: "error",
           data: {
+            status: "error",
             message: "There is same data in the database.",
           },
         });
@@ -231,19 +238,21 @@ app.post("/reservation_data", function (req, res) {
 
       await insertData();
       res.status(200).send({
-        status: "ok",
         data: {
+          status: "ok",
           order_id: order_id,
           message: "Applied success",
         },
       });
+      return;
     } catch {
       res.status(500).send({
-        status: "error",
         data: {
+          status: "error",
           message: "POST ERROR: reserved_data (server/db error)",
         },
       });
+      return;
     }
   }
 
@@ -251,6 +260,7 @@ app.post("/reservation_data", function (req, res) {
 });
 
 app.patch("/reservation_data", function (req, res) {
+  //modify the exist reservation data
   const patchData = req.body.data;
   const target_column = patchData["target_column"];
   const target_value = patchData["target_value"];
@@ -281,12 +291,22 @@ app.patch("/reservation_data", function (req, res) {
   }
 
   async function patchDataToDB() {
+    if (req.session.username !== "kitani") {
+      res.status(400).send({
+        data: {
+          status: "error",
+          message: "Please verify account first.",
+        },
+      });
+      return;
+    }
+
     try {
       let dataList = await updateDataDependsOnTargetColumn();
       if (dataList.affectedRows === 1) {
         res.status(200).send({
-          status: "ok",
           data: {
+            status: "ok",
             order_id: order_id,
             message: `${target_column} changed success, value = ${target_value}`,
           },
@@ -294,106 +314,30 @@ app.patch("/reservation_data", function (req, res) {
         return;
       }
       res.status(400).send({
-        status: "error",
         data: {
+          status: "error",
           message: "update reserved_data failed",
         },
       });
+      return;
     } catch {
       res.status(500).send({
-        status: "error",
         data: {
+          status: "error",
           message: "PATCH ERROR: reserved_data (server/db error)",
         },
       });
+      return;
     }
   }
 
   patchDataToDB();
 });
 
-// app.patch("/reservation_data", function (req, res) {
-//   const patchData = req.body.data;
-//   const target_column = patchData["target_column"];
-//   const target_value = patchData["target_value"];
-//   const order_id = patchData["order_id"];
-//   /*
-// get: target_column, target_value, order_id
-
-// target_column: //要修改的項目
-//   "room",
-//   "duration",
-//   "start_time",
-//   "attendence",
-//   "date",
-//   "name",
-//   "phone",
-//   "email",
-//   "order_status",
-// */
-//   try {
-//     pool.getConnection(function (err, connection) {
-//       if (err) {
-//         connection.release();
-//         res.status(510).send({
-//           status: "error",
-//           data: {
-//             status: "error",
-//             message: "PATCH ERROR: not connected!",
-//           },
-//         });
-//         // throw err;
-//         console.log(err);
-//         return;
-//       }
-//       // let sql =
-//       //   "UPDATE `reserved_data` SET order_status = ? WHERE `date` = ? AND `room` = ? AND `time` = ?";
-//       // // let values = ["tested", "2021.07.24", "A", "10:00"];
-//       // let values = [patchData["edit_target"], patchData["date"], patchData["room"], patchData["time"]];
-//       // let sql =
-//       //   "UPDATE `reserved_data` SET order_status = ? WHERE `order_id` = ? ";
-//       let sql =
-//         "UPDATE `reserved_data` SET " +
-//         target_column +
-//         "= ? WHERE `order_id` = ? ";
-//       let values = [target_value, order_id];
-//       connection.query(sql, values, function (err, result) {
-//         if (err) {
-//           connection.release();
-//           res.status(510).send({
-//             status: "error",
-//             data: {
-//               message: "PATCH ERROR: sql query failed",
-//             },
-//           });
-//           // throw err;
-//           console.log(err);
-//           return;
-//         }
-//         connection.release();
-//         res.status(200).send({
-//           status: "ok",
-//           data: {
-//             order_id: order_id,
-//             message: `${target_column} changed success, value = ${target_value}`,
-//           },
-//         });
-//       });
-//     });
-//   } catch (err) {
-//     connection.release();
-//     res.status(500).send({
-//       status: "error",
-//       data: {
-//         message: "PATCH ERROR: reseverd data (server/db error)",
-//       },
-//     });
-//   }
-// });
-
 //http://localhost:3100/api/user
 app.get("/api/user", function (req, res) {
   //get user
+  console.log(req.session.email);
   async function selectDataFromEmail() {
     //insert data
     let sql = "SELECT * FROM users WHERE email = ?";
@@ -405,8 +349,8 @@ app.get("/api/user", function (req, res) {
   async function getDataFromDB() {
     if (req.session.email === undefined) {
       res.status(200).send({
-        status: "ok",
         data: {
+          status: "ok",
           result: null,
           message: "Please login first.",
         },
@@ -417,19 +361,21 @@ app.get("/api/user", function (req, res) {
     let dataList = await selectDataFromEmail();
     if (dataList.length > 0) {
       res.status(200).send({
-        status: "ok",
         data: {
+          status: "ok",
           result: dataList,
           message: "User login success",
         },
       });
+      return;
     }
     res.status(500).send({
-      status: "error",
       data: {
+        status: "error",
         message: "GET ERROR: user (server/db error)",
       },
     });
+    return;
   }
 
   getDataFromDB();
@@ -450,8 +396,8 @@ app.post("/api/user", function (req, res) {
 
   async function insertData() {
     //insert data
-    let sql = "INSERT INTO users (name, email, password) VALUES ?";
-    let values = [[name, email, password]];
+    let sql = "INSERT INTO users (name, email, password, islogin) VALUES ?";
+    let values = [[name, email, password, 0]];
     let dataList = await query(sql, [values]);
     return dataList;
   }
@@ -464,12 +410,15 @@ app.post("/api/user", function (req, res) {
       isRegisterFailed = true;
       errorMsg += "Error! The column(s) is/are empty.";
     }
-    //TODO: 正則表達確認email地址合法性
-    // else if{
-    //   regexEmail.search(email) == None:
-    //   isRegisterFailed = True
-    //   errorMsg += "Error! This email address is invalid."
-    // }
+    //透過RE確認email地址合法性
+    else if (email.search(regexEmail) === -1) {
+      isRegisterFailed = true;
+      errorMsg += "Error! This email address is invalid.";
+      console.log("==============");
+      console.log(errorMsg);
+      return;
+    }
+    //防止資料輸入長度大於資料庫設定長度
     else if (name.length > 255 || password.length > 255) {
       isRegisterFailed = true;
       errorMsg += "Error! This name or password is too long.";
@@ -482,8 +431,8 @@ app.post("/api/user", function (req, res) {
     }
     if (isRegisterFailed) {
       res.status(400).send({
-        status: "error",
         data: {
+          status: "error",
           message: errorMsg,
         },
       });
@@ -492,19 +441,21 @@ app.post("/api/user", function (req, res) {
     dataList = await insertData();
     if (dataList.affectedRows > 0) {
       res.status(200).send({
-        status: "ok",
         data: {
+          status: "ok",
           message: "Register success",
         },
       });
+      return;
     }
 
     res.status(500).send({
-      status: "error",
       data: {
+        status: "error",
         message: "POST ERROR: user (server/db error)",
       },
     });
+    return;
   }
 
   postDataToDB();
@@ -512,6 +463,7 @@ app.post("/api/user", function (req, res) {
 
 app.patch("/api/user", function (req, res) {
   //login user
+
   const patchData = req.body.data;
   const email = patchData["email"];
   const password = patchData["password"];
@@ -525,24 +477,48 @@ app.patch("/api/user", function (req, res) {
   }
 
   async function getDataFromDB() {
-    let dataList = await selectDataFromEmailAndPassword();
-    if (dataList.length === 1) {
+    try {
+      let dataList = await selectDataFromEmailAndPassword();
+      if (dataList.length !== 1) {
+        res.status(400).send({
+          data: {
+            status: "error",
+            message: "Email or Password is incorrect.",
+          },
+        });
+        return;
+      }
+
       req.session.email = email; //use email as session content
+      if (dataList[0].websitename === "kitani") {
+        req.session.username = "kitani";
+        res.status(200).send({
+          data: {
+            status: "ok",
+            message: "login success (welcome back)",
+          },
+        });
+
+        return;
+      }
+
+      req.session.username = email;
       res.status(200).send({
-        status: "ok",
         data: {
-          message: "login success",
+          status: "ok",
+          message: "login success (not verified account)",
+        },
+      });
+      return;
+    } catch {
+      res.status(500).send({
+        data: {
+          status: "error",
+          message: "PATCH ERROR: user (server/db error)",
         },
       });
       return;
     }
-
-    res.status(400).send({
-      status: "error",
-      data: {
-        message: "Email or Password incorrect.",
-      },
-    });
   }
 
   getDataFromDB();
@@ -552,17 +528,17 @@ app.delete("/api/user", function (req, res) {
   //logout
   req.session.destroy();
   res.status(200).send({
-    status: "ok",
     data: {
+      status: "ok",
       message: "User logout success",
     },
   });
+  return;
 });
 
 app.listen(3100, function () {
   console.log("Server Started");
 });
-
 /* example
 //http:localhost:3100/?data=3
 app.get('/', function (req, res) {
