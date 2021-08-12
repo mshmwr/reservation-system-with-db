@@ -8,7 +8,6 @@
 ## feature (both side)
 - 多國語系介面切換（英語）
   <!--04-customer-reservation(multiLang) -->
-  https://user-images.githubusercontent.com/66200737/129248137-3cdb9c9a-9687-434b-ac7b-c9591246bed4.mp4
   
 
 
@@ -18,48 +17,128 @@ https://user-images.githubusercontent.com/66200737/129253435-ad2e9f8a-679c-40ea-
 ## feature (customer side)
 
 - 預約流程
-  ![01-customer-reservation](https://user-images.githubusercontent.com/66200737/129247145-3effbd2b-2ad5-4b1e-9e79-0bd60c317233.mp4)
+  <!-- 01-customer-reservation -->
+
+
+https://user-images.githubusercontent.com/66200737/129253745-8fa3f9aa-9c09-4d10-aa0a-e1d2d8e9837a.mp4
+
+
 - 訂單查詢流程
-  ![02-order-inquery](https://user-images.githubusercontent.com/66200737/129247919-6aa6d99b-6b13-4738-8b4c-094ad148bb03.mp4)
+  <!-- 02-order-inquery -->
+
+
+https://user-images.githubusercontent.com/66200737/129253782-ab842a3d-be0a-4d9b-bd75-ccf8244daa47.mp4
+
 
 - 選擇預約時間 (點擊模式設計)
   - 自由選擇不同包廂
-    ![05-1-time-selection_normal](https://user-images.githubusercontent.com/66200737/129249121-90101739-62c7-4ab6-8b7d-38cb04f5b31f.mp4)
+    <!-- 05-1-time-selection_normal -->
+
+
+https://user-images.githubusercontent.com/66200737/129253806-198c2a90-b9a4-4c3a-a9dd-9e0b69af631f.mp4
+
+
   - 自動補齊點選區間的顏色
-    ![05-2-time-selection_auto-fill-up(1x)](https://user-images.githubusercontent.com/66200737/129249128-74fd1f18-6b01-4fd6-bb12-3bb84ab754c9.mp4)
+    <!--05-2-time-selection_auto-fill-up(1x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129253842-fb1b473b-c645-473b-bf64-e716573d47d0.mp4
+
+
   - 進行點選後，可以自由切換到其他包廂時段做選擇
-    ![05-3-time-selection_cross-timeline(1.5x)](https://user-images.githubusercontent.com/66200737/129249236-ca28a0a3-bb87-4144-8b24-cd8ac342d815.mp4)
+    <!-- 05-3-time-selection_cross-timeline(1.5x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129253860-7a6df0e4-d0e8-464e-b2e3-719b6e4ae5a7.mp4
+
+
   - 防止往回選擇時間
-    ![05-4-time-selection_prevent-opposite-direction-selection(1.5x)](https://user-images.githubusercontent.com/66200737/129249266-2b55b20a-4516-4c65-8929-4c27a3fc94b4.mp4)
+    <!-- 05-4-time-selection_prevent-opposite-direction-selection(1.5x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129253892-3ec521d1-ed32-437c-a8fe-d1a04d1aba2d.mp4
+
+
   - 點擊兩下取消選取
-    ![05-5-time-selection_click-two-times-to-canceled-selection(1.5x)](https://user-images.githubusercontent.com/66200737/129249306-8f11cb47-f340-48b0-8ee8-f7e9f5ace9e3.mp4)
+    <!-- 05-5-time-selection_click-two-times-to-canceled-selection(1.5x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129253943-e86b4880-b893-468f-be6b-c4f06227d730.mp4
+
+
   - 選擇區域跨過已預約時段時，選取無效
-    ![05-6-time-selection_cannot-cross-reserved-region(1.5x)](https://user-images.githubusercontent.com/66200737/129249311-51a965bd-02e0-4a2c-af43-cb4f26572358.mp4)
+    <!-- 05-6-time-selection_cannot-cross-reserved-region(1.5x) -->
+    
+
+https://user-images.githubusercontent.com/66200737/129253979-6718772e-e4c4-4e2b-816f-1f2a3adfd0ab.mp4
+
+
 
 - 訂購時修改預約時段 & 修改預約資料
-  ![06-customer-modify-time-selection-or-info(2x)](https://user-images.githubusercontent.com/66200737/129249456-bd52ca8b-9bd7-4285-a47d-02e51029bba9.mp4)
+  <!-- 06-customer-modify-time-selection-or-info(2x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254020-7ecaf899-78d3-40f0-bfd5-ee872760fb17.mp4
+
 
 - 顧客查看訂單狀況
   - 透過訂單編號查詢 (此段影片包含商家修改訂單的流程，以便對比前後查詢結果)
-    ![09-1-check-order-status-after-status-changed-by-order-inquery(1.5x)](https://user-images.githubusercontent.com/66200737/129252098-3c0ba03a-4ff9-4eda-9502-11354e1f6829.mp4)
+    <!-- 09-1-check-order-status-after-status-changed-by-order-inquery(1.5x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254091-4192f2d1-9c42-482c-85e4-3faa2a0652c9.mp4
+
+
   - 透過預約系統查看時間表
-    ![09-2-check-order-status-after-status-changed-by-timeline(1.5x)](https://user-images.githubusercontent.com/66200737/129252182-41a620d4-f603-4b51-ad57-3b562e7bef6c.mp4)
+    <!-- 09-2-check-order-status-after-status-changed-by-timeline(1.5x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254112-63d4689c-4138-49ac-a2d5-0bf1d168bea5.mp4
 
 ## feature (owner side)
 - 商家登入
-  ![03-member-login](https://user-images.githubusercontent.com/66200737/129248008-193d2b0d-8f81-4f12-b4b9-68cda521337a.mp4)
+  <!-- 03-member-login -->
+
+
+https://user-images.githubusercontent.com/66200737/129254179-31dad0af-7739-432f-90b8-22dcc543743a.mp4
+
+
 - 進入後台查看整體訂單現況
   - 查看訂單日曆
-    ![07-1-check-orders-calendar(2x)](https://user-images.githubusercontent.com/66200737/129249764-00bce5b8-c813-46e9-843b-053d55ad9b08.mp4)
+    <!-- 07-1-check-orders-calendar(2x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254211-b42b7042-5fda-45ed-bff3-1cb9907b59c6.mp4
+
+
   - 查看上下個月份的預約
-    ![07-2-check-another-month-orders(1.5x)](https://user-images.githubusercontent.com/66200737/129249786-1222e7c4-53ae-49e1-9d98-538bc93f984b.mp4)
+    <!-- 07-2-check-another-month-orders(1.5x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254250-b5dec55f-2f74-4c49-934d-917da4aeab65.mp4
+
+
   - 點開時間表
-    ![07-3-open-the-timeline(1x, cut)](https://user-images.githubusercontent.com/66200737/129249818-483294d2-8759-4a02-b66b-6e0823f7e6e4.mp4)
+    <!-- 07-3-open-the-timeline(1x, cut) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254297-8d5ef35a-4f57-4dd2-a451-0489c72cbe8a.mp4
+
+
   - 篩選日期
-    ![07-4-choose-a-date(1x, cut)](https://user-images.githubusercontent.com/66200737/129249902-d8091e1d-6d2d-4aa7-a67a-493e863ccceb.mp4)
+    <!-- 07-4-choose-a-date(1x, cut) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254330-bb576540-647f-4751-8b48-685e749cba43.mp4
+
+
   - 篩選房間
-    ![07-5-choose-a-room(1x)](https://user-images.githubusercontent.com/66200737/129249932-99a56f7e-2656-4f9e-ba62-a6d5f5e39931.mp4)
-    
+    <!-- 07-5-choose-a-room(1x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254344-b002051c-0ebb-4058-ae85-351d2c83dff7.mp4
+
+
 - 修改訂單狀態（打開時間表）
   訂單狀態以四種顏色代表：
   ```diff
@@ -69,19 +148,57 @@ https://user-images.githubusercontent.com/66200737/129253435-ad2e9f8a-679c-40ea-
   - 時段有衝突 (紅色)：這筆訂單的申請時段和已確認預約的時段產生衝突
   ```
   - 已申請訂位 狀態改成 已確認預約
-    ![08-1-modify-order-status-to-reserved(1x)](https://user-images.githubusercontent.com/66200737/129251483-1ced0288-4bbe-43bf-a3c7-d55582142ddf.mp4)
+    <!-- 08-1-modify-order-status-to-reserved(1x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254386-de3957af-f025-441c-a421-9b7e95a0c46e.mp4
+
+
   - 衝突的訂單(紅色)禁止修改成確認預約
-    ![08-2-modify-order-status-conflicted-cannot-choose-reserved(1x)](https://user-images.githubusercontent.com/66200737/129251520-40b5027c-3fc3-417d-905a-ef46f137f75e.mp4)
+    <!-- 08-2-modify-order-status-conflicted-cannot-choose-reserved(1x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254413-94334e51-eb37-493e-a918-914aaff1a2e3.mp4
+
+
   - 已確認預約 狀態改回 已申請訂位 & 已預約狀態下，預約按鈕和確認按鈕禁止點擊
-    ![08-3-modify-order-status-to-applied(1x)](https://user-images.githubusercontent.com/66200737/129251552-d818b880-07d4-432a-bfaa-a1f7d68fb8e7.mp4)
+    <!-- 08-3-modify-order-status-to-applied(1x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254431-644190b2-80b5-4e95-a897-b562dee30a7c.mp4
+
+
   - 已確認預約 狀態改成 已取消訂單
-    ![08-4-modify-order-status-to-deleted(1x)](https://user-images.githubusercontent.com/66200737/129251583-5b311f06-2b4a-4756-8159-9a7575102b9a.mp4)  
+    <!-- 08-4-modify-order-status-to-deleted(1x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254462-f35c2224-f4b2-4792-ad9f-0c8f93d8c771.mp4
+
+
   - 已取消的訂單無法再修改狀態
-    ![08-5-modify-order-status-delected-cannot-be-modified(1x)](https://user-images.githubusercontent.com/66200737/129251605-f9166d15-651e-4c47-a127-3ba193933dab.mp4) 
+    <!-- 08-5-modify-order-status-delected-cannot-be-modified(1x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254489-547917ce-9fc8-4a4a-aa2f-221b5ddd33a6.mp4
+
+
   - 可以修改今天以後時間的訂單 & 時間表會同步更新成點擊的訂單的日期
-    ![08-6-modify-order-status-from-now-on-and-update-timeline-date](https://user-images.githubusercontent.com/66200737/129251631-71194a34-7b42-47cf-b1f1-29c1a6f3e3fe.mp4)
+    <!-- 08-6-modify-order-status-from-now-on-and-update-timeline-date -->
+
+
+https://user-images.githubusercontent.com/66200737/129254517-d1a2632c-929a-43de-88a2-ca124581c1c7.mp4
+
+
   - 禁止修改過去時間的訂單
-    ![08-7-modify-order-status-cannot-edit-order-before(1x)](https://user-images.githubusercontent.com/66200737/129251657-7e4b1da4-3abb-4ebc-943b-ee414d9adc03.mp4)
-    
+    <!-- 08-7-modify-order-status-cannot-edit-order-before(1x) -->
+
+
+https://user-images.githubusercontent.com/66200737/129254550-fefcd2ff-0646-463c-9c5f-7f27ba22fb3d.mp4
+
+
 - 商家登出
-![10-member-logout](https://user-images.githubusercontent.com/66200737/129252358-db857a77-da7d-45e9-8539-7114b2765011.mp4)
+  <!-- 10-member-logout -->
+
+
+https://user-images.githubusercontent.com/66200737/129254594-8a8bfc75-7223-4f33-bb20-7d33e6365b62.mp4
+
