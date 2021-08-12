@@ -1,11 +1,11 @@
 # KTV Reservation System and CMS
-## introducion
+## Introducion
 提供顧客與商家訂位資訊交流的互動介面（中英雙語系）。
 顧客可以查看目前可訂位資訊，並進行訂位的手續，完成後會取得訂單編號，可以透過網頁查詢訂單目前的處理狀況。
 商家除了顧客能使用的功能以外，還可以使用日曆的型態管理目前所有訂單，和調整訂單內容。
 
 
-## feature (both side)
+## Feature (both sides)
 ### 多國語系介面切換（英語）
   <!--04-customer-reservation(multiLang) -->
   
@@ -14,7 +14,7 @@
 https://user-images.githubusercontent.com/66200737/129253435-ad2e9f8a-679c-40ea-9b0d-9ef3daad7c9c.mp4
 
 
-## feature (customer side)
+## Features (customer side)
 
 ### 預約流程
   <!-- 01-customer-reservation -->
@@ -95,7 +95,7 @@ https://user-images.githubusercontent.com/66200737/129254091-4192f2d1-9c42-482c-
 
 https://user-images.githubusercontent.com/66200737/129254112-63d4689c-4138-49ac-a2d5-0bf1d168bea5.mp4
 
-## feature (owner side)
+## Features (owner side)
 ### 商家登入
   <!-- 03-member-login -->
 
