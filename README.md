@@ -5,7 +5,7 @@
 商家除了顧客能使用的功能以外，還可以使用日曆的型態管理目前所有訂單，和調整訂單內容。
 
 
-## Feature (both sides)
+## Feature (common)
 ### 多國語系介面切換（英語）
   <!--04-customer-reservation(multiLang) -->
   
