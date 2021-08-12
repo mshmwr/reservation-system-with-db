@@ -132,7 +132,7 @@ https://user-images.githubusercontent.com/66200737/129254297-8d5ef35a-4f57-4dd2-
 https://user-images.githubusercontent.com/66200737/129254330-bb576540-647f-4751-8b48-685e749cba43.mp4
 
 
-5. 篩選房間
+5. 篩選包廂
     <!-- 07-5-choose-a-room(1x) -->
 
 
