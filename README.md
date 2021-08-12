@@ -9,6 +9,11 @@
 - 多國語系介面切換（英語）
   <!--04-customer-reservation(multiLang) -->
   https://user-images.githubusercontent.com/66200737/129248137-3cdb9c9a-9687-434b-ac7b-c9591246bed4.mp4
+  
+
+
+https://user-images.githubusercontent.com/66200737/129253435-ad2e9f8a-679c-40ea-9b0d-9ef3daad7c9c.mp4
+
 
 ## feature (customer side)
 
