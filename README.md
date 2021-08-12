@@ -7,7 +7,8 @@
 
 ## feature (both side)
 - 多國語系介面切換（英語）
-  ![04-customer-reservation(multiLang)](https://user-images.githubusercontent.com/66200737/129248137-3cdb9c9a-9687-434b-ac7b-c9591246bed4.mp4)
+  <!--04-customer-reservation(multiLang) -->
+  https://user-images.githubusercontent.com/66200737/129248137-3cdb9c9a-9687-434b-ac7b-c9591246bed4.mp4
 
 ## feature (customer side)
 
