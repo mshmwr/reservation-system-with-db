@@ -43,7 +43,7 @@ const pool = mysql.createPool({
 });
 
 //Regex
-const regexEmail = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
+const regexEmail = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$";
 
 let query = function (sql, values) {
   return new Promise((resolve, reject) => {
