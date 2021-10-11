@@ -21,7 +21,6 @@ app.use(
   })
 );
 
-// app.use(express.static("public"));
 app.use(cors());
 app.use(express.static(path.join(__dirname, "build")));
 
@@ -75,11 +74,30 @@ const SECRET_KEY = process.env.SECRET_KEY;
 app.get("/", function (req, res) {
   req.session.myname = "lyc";
   let num = req.query.data;
-  res.send({
-    data: num,
+  // res.send({
+  //   data: num,
+  // });
+  // res.send("hello");
+  res.sendFile(path.join(__dirname, "build", "index.html"), function (err) {
+    if (err) {
+      res.status(500).send(err)
+    }
   });
-  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
+
+
+app.get('/memberSystem', function (req, res) {
+  req.session.myname = "lyc";
+  let num = req.query.data;
+  // res.send({
+  //   data: num,
+  // });
+  res.sendFile(path.join(__dirname, "build", "index.html"), function (err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
 
 //--------------- reservation_data ---------------//
 const postDataKeys = [
@@ -469,6 +487,7 @@ app.patch("/api/user", function (req, res) {
   const patchData = req.body.data;
   const email = patchData["email"];
   const password = patchData["password"];
+  console.log(patchData);
 
   async function selectDataFromEmailAndPassword() {
     //insert data
@@ -538,7 +557,7 @@ app.delete("/api/user", function (req, res) {
   return;
 });
 
-app.listen(3100, function () {
+app.listen(process.env.PORT || 3100, function () {
   console.log("Server Started");
 });
 // process.env.PORT ||
