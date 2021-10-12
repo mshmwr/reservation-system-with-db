@@ -9,7 +9,9 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
     </td>
     <td>
     Customers can view the current availability of reservations and proceed with the reservation process. After completion, they will receive an order number and can check the current status of their orders through the website.
-    </td>
+    <img src="src/readmeImages/state3-customer-homepage.png" width="130px" height="100px">
+    <img src="src/readmeImages/state3-customer-reserved-page.png" width="130px" height="100px">
+  </td>
   </tr>
   <tr>
     <td>
@@ -17,18 +19,16 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
     </td>
     <td>
     In addition to the features that customers can use, merchants can also use the calendar to manage all current orders and adjust the order content.
+    <br/>
+    <img src="src/readmeImages/state3-merchant-CMS.png" width="130px" height="100px">
+    <img src="src/readmeImages/state3-merchant-CMS-ordersWindow.png" width="50px" height="100px">
     </td>
   </tr>
 </table>
 
-
 <!-- 提供顧客與商家訂位資訊交流的互動介面（中英雙語系）。
 顧客可以查看目前可訂位資訊，並進行訂位的手續，完成後會取得訂單編號，可以透過網頁查詢訂單目前的處理狀況。
 商家除了顧客能使用的功能以外，還可以使用日曆的型態管理目前所有訂單，和調整訂單內容。 -->
-
-<p align="center">
-  <img src="src/images/readmeImages/homepage.png" width="800px">
-</p>
 
 <p align="center">
   <b>
@@ -51,7 +51,6 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
     </table>
   </b>
 </p>
-
 
 # Table of Contents
 
@@ -125,19 +124,18 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
 
 # <a name="used-skills">Used Skills</a>
 
-  | skill                     | description                                                                                                                          |
-  | ------------------------- | -------------------------------------------------------------------------- |
-  | React ( hook )            | SPA, reusable functional components, custom hooks                                            |
-  | React Router              | SPA, public and private route set up                                                               	         |
-  | Redux           			  | centralize the application's state                                                        	                 |
-  | styled-components         | CSS-In-JS library for styling                                                                                |
-  | BEM methodology | help creating reusable and modular components                 |
-  | React-i18next kit       			| an internationalization-framework to localize the website 					 |
-  | Prettier           	       | keep coding style consistent and better formatted                                                |
-  | Reset.css         	    | reduce browser inconsistencies in things in development                                        |
-  | webpack                | bundle JavaScript files and resources for usage      							 |
-  | Node.js                  | Hosting for Back-End                                                                             				 |
-
+| skill             | description                                               |
+| ----------------- | --------------------------------------------------------- |
+| React ( hook )    | SPA, reusable functional components, custom hooks         |
+| React Router      | SPA, public and private route set up                      |
+| Redux             | centralize the application's state                        |
+| styled-components | CSS-In-JS library for styling                             |
+| BEM methodology   | help creating reusable and modular components             |
+| React-i18next kit | an internationalization-framework to localize the website |
+| Prettier          | keep coding style consistent and better formatted         |
+| Reset.css         | reduce browser inconsistencies in things in development   |
+| webpack           | bundle JavaScript files and resources for usage           |
+| Node.js           | Hosting for Back-End                                      |
 
 # <a name="Features">Features Introduction</a>
 
@@ -149,7 +147,7 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
 
   <!--04-customer-reservation(multiLang) -->
 
-  https://user-images.githubusercontent.com/66200737/129253435-ad2e9f8a-679c-40ea-9b0d-9ef3daad7c9c.mp4
+https://user-images.githubusercontent.com/66200737/129253435-ad2e9f8a-679c-40ea-9b0d-9ef3daad7c9c.mp4
 
 ## <a name="customer-side-features"> Features (customer side)</a>
 
@@ -288,13 +286,13 @@ https://user-images.githubusercontent.com/66200737/129254344-b002051c-0ebb-4058-
 ### <a name="Modify-order-status">:star: Modify order status (open schedule)</a>
 
 Order status is represented by four colors:
+
 <ul style="padding-top: 0.5rem; padding-bottom: 0.5rem; border: 1px solid;">
   <li><span style="color:BlanchedAlmond;">Reservation applied (brown): Customer has not paid</span></li>
   <li><span style="color:chartreuse;">Reservation confirmed (green): Customer has paid</span></li>
   <li><span style="color:LightGrey;">Cancelled order (grey): Customer cancelled the order</span></li>
   <li><span style="color:Red;">Orders Time Conflicted (red): The time of this order conflicts with the time of the confirmed order</span></li>
 </ul>
-
 
 1. Change order status from "Applied" to "Confirmed"
 2. If the order status is "Conflicted", it is forbidden to change it to the confirmed status
