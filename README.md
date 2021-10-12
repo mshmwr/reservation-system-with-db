@@ -1,19 +1,61 @@
-# KTV Reservation System and CMS
+# Reserve Your Singing Day
 
-Provide an interactive interface (bilingual) for customers and merchants to exchange reservation information.
+Provide an interactive interface (bilingual) for customers and merchants to exchange the reservation information.
 
-**For Customer**: Customers can view the current availability of reservations and proceed with the reservation process. After completion, they will receive an order number and can check the current status of their orders through the website.
+<table>
+  <tr>
+    <td>
+    For Customer
+    </td>
+    <td>
+    Customers can view the current availability of reservations and proceed with the reservation process. After completion, they will receive an order number and can check the current status of their orders through the website.
+    </td>
+  </tr>
+  <tr>
+    <td>
+    For Merchant
+    </td>
+    <td>
+    In addition to the features that customers can use, merchants can also use the calendar to manage all current orders and adjust the order content.
+    </td>
+  </tr>
+</table>
 
-**For Merchant**: In addition to the features that customers can use, merchants can also use the calendar to manage all current orders and adjust the order content.
 
 <!-- 提供顧客與商家訂位資訊交流的互動介面（中英雙語系）。
 顧客可以查看目前可訂位資訊，並進行訂位的手續，完成後會取得訂單編號，可以透過網頁查詢訂單目前的處理狀況。
 商家除了顧客能使用的功能以外，還可以使用日曆的型態管理目前所有訂單，和調整訂單內容。 -->
 
+////網頁截圖看這邊
+<p align="center">
+  <img src="src/utils/images/readmeImages/homepage.png" width="800px">
+</p>
+
+<p align="center">
+  <b>
+    Demo(customer): https://linkinterior.com.tw/
+    Demo(merchant): http://
+  </b>
+</p>
+
+
+<br/>
+<p align="center">
+  <b>Test Account (merchant)</b>
+</p>
+<p align="center">
+  Email: test1@gmail.com
+</p>
+<p align="center">
+  Password: test10000
+</p>
+
+
 # Table of Contents
 
-- [React source code](#react-source-code)
-- [Features introduction](#Features)
+- [React Source Code](#react-source-code)
+- [Used Skills](#used-skills)
+- [Features Introduction](#Features)
 
   - [common](#common-feature)
     <details><summary>feature</summary><blockquote>
@@ -76,22 +118,39 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
 
     </details>
 
-# <a name="react-source-code">React source code</a>
+# <a name="react-source-code">React Source Code</a>
 
 [react source code (github repository)](https://github.com/mshmwr/reservation-system)
 
-# <a name="Features">Features introduction</a>
+# <a name="used-skills">Used Skills</a>
+
+  | skill                     | description                                                                                                                          |
+  | ------------------------- | -------------------------------------------------------------------------- |
+  | React ( hook )            | SPA, reusable functional components, custom hooks                                            |
+  | React Router              | SPA, public and private route set up                                                               	         |
+  | Redux           			  | centralize the application's state                                                        	                 |
+  | styled-components         | CSS-In-JS library for styling                                                                                |
+  | BEM methodology | help creating reusable and modular components                 |
+  | React-i18next kit       			| an internationalization-framework to localize the website 					 |
+  | Prettier           	       | keep coding style consistent and better formatted                                                |
+  | Reset.css         	    | reduce browser inconsistencies in things in development                                        |
+  | webpack                | bundle JavaScript files and resources for usage      							 |
+  | Node.js                  | Hosting for Back-End                                                                             				 |
+
+
+# <a name="Features">Features Introduction</a>
 
 ## <a name="common-feature">Features (common)</a>
 
 - [Multi-language interface switching](#Multi-language-interface-switching)
 
 ### <a name="Multi-language-interface-switching"> :star: Multi-language Interface Switching</a>
+<details><summary>
+    <!--04-customer-reservation(multiLang) -->
 
-  <!--04-customer-reservation(multiLang) -->
+  https://user-images.githubusercontent.com/66200737/129253435-ad2e9f8a-679c-40ea-9b0d-9ef3daad7c9c.mp4
 
-https://user-images.githubusercontent.com/66200737/129253435-ad2e9f8a-679c-40ea-9b0d-9ef3daad7c9c.mp4
-
+</summary></details>
 ## <a name="customer-side-features"> Features (customer side)</a>
 
 - [Reservation Process](#Reservation-Process)
@@ -265,7 +324,7 @@ https://user-images.githubusercontent.com/66200737/129254386-de3957af-f025-441c-
 
 https://user-images.githubusercontent.com/66200737/129254413-94334e51-eb37-493e-a918-914aaff1a2e3.mp4
 
-3. If the order status is "Applied"
+3. If the order status is "Reserved"
    1. Change order status from "Applied" to "Confirmed"
    2. "Reserved" button and "Confirmed" button are not allowed to be clicked
 
@@ -273,7 +332,7 @@ https://user-images.githubusercontent.com/66200737/129254413-94334e51-eb37-493e-
 
 https://user-images.githubusercontent.com/66200737/129254431-644190b2-80b5-4e95-a897-b562dee30a7c.mp4
 
-4. Change order status from "Confirmed" to "Cancelled"
+4. Change order status from "Reserved" to "Cancelled"
 <!-- 08-4-modify-order-status-to-deleted(1x) -->
 
 https://user-images.githubusercontent.com/66200737/129254462-f35c2224-f4b2-4792-ad9f-0c8f93d8c771.mp4
