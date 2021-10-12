@@ -10,8 +10,8 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
     <td>
     Customers can view the current availability of reservations and proceed with the reservation process. After completion, they will receive an order number and can check the current status of their orders through the website.
     <br/>
-    <img src="src/readmeImages/state3-customer-homepage.png" width="130px" height="100px">
-    <img src="src/readmeImages/state3-customer-reserved-page.png" width="130px" height="100px">
+    <img src="src/readmeImages/state3-customer-homepage.png" width="400px" height="300px">
+    <img src="src/readmeImages/state3-customer-reserved-page.png" width="400px" height="300px">
   </td>
   </tr>
   <tr>
@@ -21,8 +21,8 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
     <td>
     In addition to the features that customers can use, merchants can also use the calendar to manage all current orders and adjust the order content.
     <br/>
-    <img src="src/readmeImages/state3-merchant-CMS.png" width="130px" height="100px">
-    <img src="src/readmeImages/state3-merchant-CMS-ordersWindow.png" width="50px" height="100px">
+    <img src="src/readmeImages/state3-merchant-CMS.png" width="400px" height="300px">
+    <img src="src/readmeImages/state3-merchant-CMS-ordersWindow.png" width="150px" height="300px">
     </td>
   </tr>
 </table>
