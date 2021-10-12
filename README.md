@@ -9,6 +9,7 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
     </td>
     <td>
     Customers can view the current availability of reservations and proceed with the reservation process. After completion, they will receive an order number and can check the current status of their orders through the website.
+    <br/>
     <img src="src/readmeImages/state3-customer-homepage.png" width="130px" height="100px">
     <img src="src/readmeImages/state3-customer-reserved-page.png" width="130px" height="100px">
   </td>
@@ -36,6 +37,7 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
       <tr>
         <td>Demo(customer)</td>
         <td>http://3.15.89.71:3100</td>
+        <td></td>
       </tr>
       <tr>
         <td>Demo(merchant)</td>
@@ -147,7 +149,11 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
 
   <!--04-customer-reservation(multiLang) -->
 
-https://user-images.githubusercontent.com/66200737/129253435-ad2e9f8a-679c-40ea-9b0d-9ef3daad7c9c.mp4
+
+https://user-images.githubusercontent.com/66200737/137017474-8b02307a-b607-4332-b6c8-26a57e70676e.mp4
+
+
+
 
 ## <a name="customer-side-features"> Features (customer side)</a>
 
@@ -161,13 +167,21 @@ https://user-images.githubusercontent.com/66200737/129253435-ad2e9f8a-679c-40ea-
 
   <!-- 01-customer-reservation -->
 
-https://user-images.githubusercontent.com/66200737/129253745-8fa3f9aa-9c09-4d10-aa0a-e1d2d8e9837a.mp4
+
+
+https://user-images.githubusercontent.com/66200737/137017566-e65b7106-055e-44a7-9d09-7c16d014faa4.mp4
+
+
+
 
 ### <a name="Order-Enquiry-Process"> :star: Order Enquiry Process </a>
 
   <!-- 02-order-enquiry -->
 
-https://user-images.githubusercontent.com/66200737/129253782-ab842a3d-be0a-4d9b-bd75-ccf8244daa47.mp4
+
+https://user-images.githubusercontent.com/66200737/137017589-8ee1f5fb-ea13-4122-b571-a0c440c9a1b7.mp4
+
+
 
 ### <a name="Select-Appointment-Time"> :star: Select Appointment Time </a>
 
@@ -184,27 +198,42 @@ https://user-images.githubusercontent.com/66200737/129253782-ab842a3d-be0a-4d9b-
 1. Freedom to choose different rooms
 <!-- 05-1-time-selection_normal -->
 
-https://user-images.githubusercontent.com/66200737/129253806-198c2a90-b9a4-4c3a-a9dd-9e0b69af631f.mp4
+
+https://user-images.githubusercontent.com/66200737/137017703-a1e5de87-7369-4a0e-a1e4-4158399eb727.mp4
+
+
 
 2. Don't have to cancel the original selection when selecting another time
 <!-- 05-3-time-selection_cross-timeline(1.5x) -->
 
-https://user-images.githubusercontent.com/66200737/129253860-7a6df0e4-d0e8-464e-b2e3-719b6e4ae5a7.mp4
+
+https://user-images.githubusercontent.com/66200737/137017712-707a92bd-122f-432f-be17-838a6d366c52.mp4
+
+
 
 3. Prevent backward selection
 <!-- 05-4-time-selection_prevent-opposite-direction-selection(1.5x) -->
 
-https://user-images.githubusercontent.com/66200737/129253892-3ec521d1-ed32-437c-a8fe-d1a04d1aba2d.mp4
+
+https://user-images.githubusercontent.com/66200737/137017723-83bc956e-75a0-4010-8a91-d6876830affb.mp4
+
+
 
 4. Double-click to deselect
 <!-- 05-5-time-selection_click-two-times-to-canceled-selection(1.5x) -->
 
-https://user-images.githubusercontent.com/66200737/129253943-e86b4880-b893-468f-be6b-c4f06227d730.mp4
+
+https://user-images.githubusercontent.com/66200737/137017733-85d23c92-b227-459a-b869-d675338b7d8e.mp4
+
+
 
 5. The selection is invalid when the selected area crosses the booked period
 <!-- 05-6-time-selection_cannot-cross-reserved-region(1.5x) -->
 
-https://user-images.githubusercontent.com/66200737/129253979-6718772e-e4c4-4e2b-816f-1f2a3adfd0ab.mp4
+
+https://user-images.githubusercontent.com/66200737/137017745-71c9d0e5-72da-49a7-bdd3-c0fa0fe1aa68.mp4
+
+
 
 ### <a name="Modify-Appointment-Information"> :star: Modify Appointment Information</a>
 
@@ -212,7 +241,10 @@ Change the appointment time and information when ordering
 
   <!-- 06-customer-modify-time-selection-or-info(2x) -->
 
-https://user-images.githubusercontent.com/66200737/129254020-7ecaf899-78d3-40f0-bfd5-ee872760fb17.mp4
+
+https://user-images.githubusercontent.com/66200737/137017810-7242716f-349d-4bab-bbda-82b5e63948ba.mp4
+
+
 
 ### <a name="Check-Order-Status"> :star: Check Order Status</a>
 
@@ -227,12 +259,18 @@ https://user-images.githubusercontent.com/66200737/129254020-7ecaf899-78d3-40f0-
 
 <!-- 09-1-check-order-status-after-status-changed-by-order-inquery(1.5x) -->
 
-https://user-images.githubusercontent.com/66200737/129254091-4192f2d1-9c42-482c-85e4-3faa2a0652c9.mp4
+
+
+https://user-images.githubusercontent.com/66200737/137017812-ad526c30-2e84-40de-ad16-17feb29f0e4c.mp4
+
 
 2. Check the schedule through the reservation system
 <!-- 09-2-check-order-status-after-status-changed-by-timeline(1.5x) -->
 
-https://user-images.githubusercontent.com/66200737/129254112-63d4689c-4138-49ac-a2d5-0bf1d168bea5.mp4
+
+https://user-images.githubusercontent.com/66200737/137017811-aee4a552-543f-4087-9568-780e5d439e02.mp4
+
+
 
 ## <a name="merchant-side-features">Features (merchant side)</a>
 
@@ -245,43 +283,55 @@ https://user-images.githubusercontent.com/66200737/129254112-63d4689c-4138-49ac-
 
   <!-- 03-member-login -->
 
-https://user-images.githubusercontent.com/66200737/129254179-31dad0af-7739-432f-90b8-22dcc543743a.mp4
+
+https://user-images.githubusercontent.com/66200737/137017823-06467570-aa74-4839-8bda-818e85c2cdd6.mp4
+
+
 
 ### <a name="View-All-Orders-Status-In-The-CMS">:star: View All Orders Status In The CMS</a>
 
 1. View Order Calendar
-2. View previous and next month's appointments
-3. Click to open the schedule
-4. Select the date
-5. Select the room
+2. Click to open the schedule
+3. Select the date
+4. Select the room
 
 ---
 
-1. View Order Calendar
+1. View Order Calendar and previous/next month's appointments
 
 <!-- 07-1-check-orders-calendar(2x) -->
 
-https://user-images.githubusercontent.com/66200737/129254211-b42b7042-5fda-45ed-bff3-1cb9907b59c6.mp4
 
-2. View previous and next month's appointments
-<!-- 07-2-check-another-month-orders(1.5x) -->
 
-https://user-images.githubusercontent.com/66200737/129254250-b5dec55f-2f74-4c49-934d-917da4aeab65.mp4
+https://user-images.githubusercontent.com/66200737/137017852-40accf09-9d08-495c-8fe8-d67525b91805.mp4
 
-3. Click to open the schedule
+
+2. Click to open the schedule
 <!-- 07-3-open-the-timeline(1x, cut) -->
 
-https://user-images.githubusercontent.com/66200737/129254297-8d5ef35a-4f57-4dd2-a451-0489c72cbe8a.mp4
 
-4. Select the date
+https://user-images.githubusercontent.com/66200737/137017867-473285c2-c736-45dd-9971-7c5cddc84cc0.mp4
+
+
+
+3. Select the date
 <!-- 07-4-choose-a-date(1x, cut) -->
 
-https://user-images.githubusercontent.com/66200737/129254330-bb576540-647f-4751-8b48-685e749cba43.mp4
 
-5. Select the room
+
+
+https://user-images.githubusercontent.com/66200737/137017875-95196ba4-411f-48da-904f-d1b150c58bde.mp4
+
+
+4. Select the room
 <!-- 07-5-choose-a-room(1x) -->
 
-https://user-images.githubusercontent.com/66200737/129254344-b002051c-0ebb-4058-ae85-351d2c83dff7.mp4
+
+https://user-images.githubusercontent.com/66200737/137017903-c868f6e9-2fce-4bef-b6bf-cfb0a044c097.mp4
+
+
+
+
 
 ### <a name="Modify-order-status">:star: Modify order status (open schedule)</a>
 
@@ -309,12 +359,18 @@ Order status is represented by four colors:
 1. Change order status from "Applied" to "Confirmed"
 <!-- 08-1-modify-order-status-to-reserved(1x) -->
 
-https://user-images.githubusercontent.com/66200737/129254386-de3957af-f025-441c-a421-9b7e95a0c46e.mp4
+
+https://user-images.githubusercontent.com/66200737/137018257-01e9df57-61d5-4602-a753-6c56d417ee42.mp4
+
+
 
 2. If the order status is "Conflicted", it is forbidden to change it to the confirmed status
 <!-- 08-2-modify-order-status-conflicted-cannot-choose-reserved(1x) -->
 
-https://user-images.githubusercontent.com/66200737/129254413-94334e51-eb37-493e-a918-914aaff1a2e3.mp4
+
+https://user-images.githubusercontent.com/66200737/137018265-e061a54f-08f9-420e-b9b7-98c7ce513708.mp4
+
+
 
 3. If the order status is "Reserved"
    1. Change order status from "Applied" to "Confirmed"
@@ -322,30 +378,50 @@ https://user-images.githubusercontent.com/66200737/129254413-94334e51-eb37-493e-
 
 <!-- 08-3-modify-order-status-to-applied(1x) -->
 
-https://user-images.githubusercontent.com/66200737/129254431-644190b2-80b5-4e95-a897-b562dee30a7c.mp4
+
+
+https://user-images.githubusercontent.com/66200737/137018275-a93da6da-9f44-4a57-a05b-a4d6447f1fd8.mp4
+
 
 4. Change order status from "Reserved" to "Cancelled"
 <!-- 08-4-modify-order-status-to-deleted(1x) -->
 
-https://user-images.githubusercontent.com/66200737/129254462-f35c2224-f4b2-4792-ad9f-0c8f93d8c771.mp4
+
+https://user-images.githubusercontent.com/66200737/137018307-e3cb33d5-07dd-4624-9514-be4f78ae032a.mp4
+
+
 
 5. Cancelled orders cannot be modified.
 <!-- 08-5-modify-order-status-delected-cannot-be-modified(1x) -->
 
-https://user-images.githubusercontent.com/66200737/129254489-547917ce-9fc8-4a4a-aa2f-221b5ddd33a6.mp4
+
+https://user-images.githubusercontent.com/66200737/137018315-c2ad3e7c-98e6-43c4-b85c-88e64407cd9f.mp4
+
+
 
 6. The schedule and the calendar will be updated simultaneously according to the selected date
 <!-- 08-6-modify-order-status-from-now-on-and-update-timeline-date -->
 
-https://user-images.githubusercontent.com/66200737/129254517-d1a2632c-929a-43de-88a2-ca124581c1c7.mp4
+
+https://user-images.githubusercontent.com/66200737/137018328-90f39fec-dc7c-4d1f-b331-9b13d5ab502e.mp4
+
+
 
 7. Order status of past time cannot be modified
 <!-- 08-7-modify-order-status-cannot-edit-order-before(1x) -->
 
-https://user-images.githubusercontent.com/66200737/129254550-fefcd2ff-0646-463c-9c5f-7f27ba22fb3d.mp4
+
+https://user-images.githubusercontent.com/66200737/137018341-5585b705-33a5-4545-940a-a214ef7da990.mp4
+
+
 
 ### <a name="Merchant-logout"> :star: Merchant Logout</a>
 
   <!-- 10-member-logout -->
 
-https://user-images.githubusercontent.com/66200737/129254594-8a8bfc75-7223-4f33-bb20-7d33e6365b62.mp4
+
+
+https://user-images.githubusercontent.com/66200737/137018384-a0da0641-949b-4976-a1ef-910d32596ae2.mp4
+
+
+
