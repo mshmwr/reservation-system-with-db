@@ -26,28 +26,30 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
 顧客可以查看目前可訂位資訊，並進行訂位的手續，完成後會取得訂單編號，可以透過網頁查詢訂單目前的處理狀況。
 商家除了顧客能使用的功能以外，還可以使用日曆的型態管理目前所有訂單，和調整訂單內容。 -->
 
-////網頁截圖看這邊
 <p align="center">
-  <img src="src/utils/images/readmeImages/homepage.png" width="800px">
+  <img src="src/images/readmeImages/homepage.png" width="800px">
 </p>
 
 <p align="center">
   <b>
-    Demo(customer): https://linkinterior.com.tw/
-    Demo(merchant): http://
+    <table>
+      <tr>
+        <td>Demo(customer)</td>
+        <td>http://3.15.89.71:3100</td>
+      </tr>
+      <tr>
+        <td>Demo(merchant)</td>
+        <td>http://3.15.89.71:3100/memberSystem</td>
+        <td>
+          <b>Test Account (merchant)</b>
+          <ul style="padding-left:1.2rem;">
+            <li>Email: test1@gmail.com</li>
+            <li>Password: test10000</li>
+          </ul>
+        </td>
+      </tr> 
+    </table>
   </b>
-</p>
-
-
-<br/>
-<p align="center">
-  <b>Test Account (merchant)</b>
-</p>
-<p align="center">
-  Email: test1@gmail.com
-</p>
-<p align="center">
-  Password: test10000
 </p>
 
 
@@ -73,11 +75,10 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
     <blockquote>
 
     1. Freedom to choose different packages
-    2. Automatically completes the color between the dots
-    3. Don't have to cancel the original selection to reselect the time
-    4. Prevent backward selection
-    5. Double-click to deselect
-    6. The selection is invalid when the selected area crosses the booked period
+    2. Don't have to cancel the original selection to reselect the time
+    3. Prevent backward selection
+    4. Double-click to deselect
+    5. The selection is invalid when the selected area crosses the booked period
 
     </blockquote></details>
 
@@ -145,12 +146,11 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
 - [Multi-language interface switching](#Multi-language-interface-switching)
 
 ### <a name="Multi-language-interface-switching"> :star: Multi-language Interface Switching</a>
-<details><summary>
-    <!--04-customer-reservation(multiLang) -->
+
+  <!--04-customer-reservation(multiLang) -->
 
   https://user-images.githubusercontent.com/66200737/129253435-ad2e9f8a-679c-40ea-9b0d-9ef3daad7c9c.mp4
 
-</summary></details>
 ## <a name="customer-side-features"> Features (customer side)</a>
 
 - [Reservation Process](#Reservation-Process)
@@ -176,11 +176,10 @@ https://user-images.githubusercontent.com/66200737/129253782-ab842a3d-be0a-4d9b-
 (Introduce the click mode)
 
 1. Freedom to choose different packages
-2. Automatically completes the color between the dots
-3. Don't have to cancel the original selection to reselect the time
-4. Prevent backward selection
-5. Double-click to deselect
-6. The selection is invalid when the selected area crosses the booked period
+2. Don't have to cancel the original selection to reselect the time
+3. Prevent backward selection
+4. Double-click to deselect
+5. The selection is invalid when the selected area crosses the booked period
 
 ---
 
@@ -189,27 +188,22 @@ https://user-images.githubusercontent.com/66200737/129253782-ab842a3d-be0a-4d9b-
 
 https://user-images.githubusercontent.com/66200737/129253806-198c2a90-b9a4-4c3a-a9dd-9e0b69af631f.mp4
 
-2. Automatically completes the color between the dots
-<!--05-2-time-selection_auto-fill-up(1x) -->
-
-https://user-images.githubusercontent.com/66200737/129253842-fb1b473b-c645-473b-bf64-e716573d47d0.mp4
-
-3. Don't have to cancel the original selection to reselect the time
+2. Don't have to cancel the original selection when selecting another time
 <!-- 05-3-time-selection_cross-timeline(1.5x) -->
 
 https://user-images.githubusercontent.com/66200737/129253860-7a6df0e4-d0e8-464e-b2e3-719b6e4ae5a7.mp4
 
-4. Prevent backward selection
+3. Prevent backward selection
 <!-- 05-4-time-selection_prevent-opposite-direction-selection(1.5x) -->
 
 https://user-images.githubusercontent.com/66200737/129253892-3ec521d1-ed32-437c-a8fe-d1a04d1aba2d.mp4
 
-5. Double-click to deselect
+4. Double-click to deselect
 <!-- 05-5-time-selection_click-two-times-to-canceled-selection(1.5x) -->
 
 https://user-images.githubusercontent.com/66200737/129253943-e86b4880-b893-468f-be6b-c4f06227d730.mp4
 
-6. The selection is invalid when the selected area crosses the booked period
+5. The selection is invalid when the selected area crosses the booked period
 <!-- 05-6-time-selection_cannot-cross-reserved-region(1.5x) -->
 
 https://user-images.githubusercontent.com/66200737/129253979-6718772e-e4c4-4e2b-816f-1f2a3adfd0ab.mp4
@@ -294,13 +288,13 @@ https://user-images.githubusercontent.com/66200737/129254344-b002051c-0ebb-4058-
 ### <a name="Modify-order-status">:star: Modify order status (open schedule)</a>
 
 Order status is represented by four colors:
+<ul style="padding-top: 0.5rem; padding-bottom: 0.5rem; border: 1px solid;">
+  <li><span style="color:BlanchedAlmond;">Reservation applied (brown): Customer has not paid</span></li>
+  <li><span style="color:chartreuse;">Reservation confirmed (green): Customer has paid</span></li>
+  <li><span style="color:LightGrey;">Cancelled order (grey): Customer cancelled the order</span></li>
+  <li><span style="color:Red;">Orders Time Conflicted (red): The time of this order conflicts with the time of the confirmed order</span></li>
+</ul>
 
-```diff
-! Reservation applied (brown): Customer has not paid
-+ Reservation confirmed (green): Customer has paid
-# Cancelled order (grey): Customer cancelled the order
-- Orders Time Conflicted (red): The time of this order conflicts with the time of the confirmed order
-```
 
 1. Change order status from "Applied" to "Confirmed"
 2. If the order status is "Conflicted", it is forbidden to change it to the confirmed status
