@@ -22,7 +22,7 @@ Provide an interactive interface (bilingual) for customers and merchants to exch
     In addition to the features that customers can use, merchants can also use the calendar to manage all current orders and adjust the order content.
     <br/>
     <img src="src/readmeImages/state3-merchant-CMS.png" width="400px" height="400px">
-    <img src="src/readmeImages/state3-merchant-CMS-ordersWindow.png" width="400px" height="400px">
+    <img src="src/readmeImages/state3-merchant-CMS-ordersWindow.png" width="500px" height="400px">
     </td>
   </tr>
 </table>
@@ -251,33 +251,9 @@ https://user-images.githubusercontent.com/66200737/137017823-06467570-aa74-4839-
 
 ### <a name="View-All-Orders-Status-In-The-CMS">:star: View All Orders Status In The CMS</a>
 
-1. View Order Calendar
-2. Click to open the schedule
-3. Select the date
-4. Select the room
-
----
-
-1. View Order Calendar and previous/next month's appointments
-
-<!-- 07-1-check-orders-calendar(2x) -->
+<!-- 07-check-orders-calendar(2x) -->
 
 https://user-images.githubusercontent.com/66200737/137017852-40accf09-9d08-495c-8fe8-d67525b91805.mp4
-
-2. Click to open the schedule
-<!-- 07-3-open-the-timeline(1x, cut) -->
-
-https://user-images.githubusercontent.com/66200737/137017867-473285c2-c736-45dd-9971-7c5cddc84cc0.mp4
-
-3. Select the date
-<!-- 07-4-choose-a-date(1x, cut) -->
-
-https://user-images.githubusercontent.com/66200737/137017875-95196ba4-411f-48da-904f-d1b150c58bde.mp4
-
-4. Select the room
-<!-- 07-5-choose-a-room(1x) -->
-
-https://user-images.githubusercontent.com/66200737/137017903-c868f6e9-2fce-4bef-b6bf-cfb0a044c097.mp4
 
 ### <a name="Modify-order-status">:star: Modify order status (open schedule)</a>
 
